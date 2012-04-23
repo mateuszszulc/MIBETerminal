@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO.Ports;
 
 namespace MIBETerminal
 {
@@ -19,9 +20,17 @@ namespace MIBETerminal
     /// </summary>
     public partial class MainWindow : Window
     {
+        SerialPortService serialPortService;
+
         public MainWindow()
         {
             InitializeComponent();
+            serialPortService = new SerialPortService();
+        }
+
+        private void QuitItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
