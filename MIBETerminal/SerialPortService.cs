@@ -12,7 +12,7 @@ namespace MIBETerminal
         static bool _continue;
         static SerialPort _serialPort;
 
-        public static void Main()
+        public static void MainSerialService()
         {
             string name;
             string message;
